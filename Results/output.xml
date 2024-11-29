@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-26T15:12:13.753311" rpa="false" schemaversion="5">
+<suite id="s1" name="AtendimentoParticularizado" source="C:\Users\rlopez\source\repos\ConnectFAS\Tests\Funcionais\AtendimentoParticularizado.robot">
+<test id="s1-t1" name="TC01 - Realiza Atendimento Particularizado" line="5">
+<kw name="Dado que acesso o ConnectFas" owner="Login_Steps">
+<msg time="2024-11-26T15:12:14.748687" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:12:14.750423" level="TRACE">Arguments: [ 'https://teste-gestor-fas.curitiba.pr.gov.br/Autenticar/Entrar' | 'chrome' ]</msg>
+<msg time="2024-11-26T15:12:14.750703" level="INFO">Opening browser 'chrome' to base url 'https://teste-gestor-fas.curitiba.pr.gov.br/Autenticar/Entrar'.</msg>
+<msg time="2024-11-26T15:12:14.755490" level="DEBUG">Selenium Manager binary found at: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-11-26T15:12:14.755732" level="DEBUG">Executing process: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
+<msg time="2024-11-26T15:12:15.670484" level="DEBUG">Driver path: C:\Users\rlopez\.cache\selenium\chromedriver\win64\131.0.6778.85\chromedriver.exe</msg>
+<msg time="2024-11-26T15:12:15.670653" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-11-26T15:12:15.695479" level="DEBUG">Started executable: `C:\Users\rlopez\.cache\selenium\chromedriver\win64\131.0.6778.85\chromedriver.exe` in a child process with pid: 3024 using 0 to output -3</msg>
+<msg time="2024-11-26T15:12:16.216866" level="DEBUG">POST http://localhost:58853/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2024-11-26T15:12:16.217553" level="DEBUG">Starting new HTTP connection (1): localhost:58853</msg>
+<msg time="2024-11-26T15:12:17.450885" level="DEBUG">http://localhost:58853 "POST /session HTTP/11" 200 0</msg>
+<msg time="2024-11-26T15:12:17.451688" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.70","chrome":{"chromedriverVersion":"131.0.6778.85 (3d81e41b6f3ac8bcae63b32e8145c9eb0cd60a2d-refs/branch-heads/6778@{#2285})","userDataDir":"C:\\Users\\rlopez\\AppData\\Local\\Temp\\scoped_dir3024_331637800"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:58857"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"23a660cbd2c6ede5f83aab82eb5ca6e7"}} | headers=HTTPHeaderDict({'Content-Length': '881', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-11-26T15:12:17.452089" level="DEBUG">Finished Request</msg>
+<msg time="2024-11-26T15:12:17.452451" level="DEBUG">POST http://localhost:58853/session/23a660cbd2c6ede5f83aab82eb5ca6e7/timeouts {'script': 5000}</msg>
+<msg time="2024-11-26T15:12:17.454220" level="DEBUG">http://localhost:58853 "POST /session/23a660cbd2c6ede5f83aab82eb5ca6e7/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-11-26T15:12:17.454448" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-11-26T15:12:17.454610" level="DEBUG">Finished Request</msg>
+<msg time="2024-11-26T15:12:17.454841" level="DEBUG">POST http://localhost:58853/session/23a660cbd2c6ede5f83aab82eb5ca6e7/timeouts {'implicit': 0}</msg>
+<msg time="2024-11-26T15:12:17.456362" level="DEBUG">http://localhost:58853 "POST /session/23a660cbd2c6ede5f83aab82eb5ca6e7/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-11-26T15:12:17.456559" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-11-26T15:12:17.456748" level="DEBUG">Finished Request</msg>
+<msg time="2024-11-26T15:12:17.456959" level="DEBUG">POST http://localhost:58853/session/23a660cbd2c6ede5f83aab82eb5ca6e7/timeouts {'pageLoad': 300000}</msg>
+<msg time="2024-11-26T15:12:17.458296" level="DEBUG">http://localhost:58853 "POST /session/23a660cbd2c6ede5f83aab82eb5ca6e7/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-11-26T15:12:17.458482" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-11-26T15:12:17.458632" level="DEBUG">Finished Request</msg>
+<msg time="2024-11-26T15:12:17.458850" level="DEBUG">POST http://localhost:58853/session/23a660cbd2c6ede5f83aab82eb5ca6e7/url {'url': 'https://teste-gestor-fas.curitiba.pr.gov.br/Autenticar/Entrar'}</msg>
+<msg time="2024-11-26T15:12:18.730010" level="DEBUG">http://localhost:58853 "POST /session/23a660cbd2c6ede5f83aab82eb5ca6e7/url HTTP/11" 200 0</msg>
+<msg time="2024-11-26T15:12:18.730258" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-11-26T15:12:18.730417" level="DEBUG">Finished Request</msg>
+<msg time="2024-11-26T15:12:18.730526" level="DEBUG">Opened browser with session id 23a660cbd2c6ede5f83aab82eb5ca6e7.</msg>
+<msg time="2024-11-26T15:12:18.730636" level="TRACE">Return: 1</msg>
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-26T15:12:14.749713" elapsed="3.981051"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:12:18.732731" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-11-26T15:12:18.733061" level="DEBUG">POST http://localhost:58853/session/23a660cbd2c6ede5f83aab82eb5ca6e7/window/maximize {}</msg>
+<msg time="2024-11-26T15:12:18.838390" level="DEBUG">http://localhost:58853 "POST /session/23a660cbd2c6ede5f83aab82eb5ca6e7/window/maximize HTTP/11" 200 0</msg>
+<msg time="2024-11-26T15:12:18.838637" level="DEBUG">Remote response: status=200 | data={"value":{"height":1056,"width":1936,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '52', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-11-26T15:12:18.838812" level="DEBUG">Finished Request</msg>
+<msg time="2024-11-26T15:12:18.838950" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-26T15:12:18.732048" elapsed="0.107011"/>
+</kw>
+<msg time="2024-11-26T15:12:18.839278" level="TRACE">Return: None</msg>
+<status status="PASS" start="2024-11-26T15:12:14.748045" elapsed="4.091324"/>
+</kw>
+<kw name="E realize o login" owner="Login_Steps">
+<msg time="2024-11-26T15:12:18.841479" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:12:18.843839" level="TRACE">Arguments: [ '//*[@id="Usuario"]' | timeout=datetime.timedelta(seconds=10) ]</msg>
+<msg time="2024-11-26T15:12:18.844444" level="DEBUG">POST http://localhost:58853/session/23a660cbd2c6ede5f83aab82eb5ca6e7/elements {'using': 'xpath', 'value': '//*[@id="Usuario"]'}</msg>
+<msg time="2024-11-26T15:12:18.888766" level="DEBUG">http://localhost:58853 "POST /session/23a660cbd2c6ede5f83aab82eb5ca6e7/elements HTTP/11" 200 0</msg>
+<msg time="2024-11-26T15:12:18.889006" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.4534D6106699D1C37F3208CE43348B27.d.B27DB4E0C57EA5D3C504B3173D96D7D1.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-11-26T15:12:18.889171" level="DEBUG">Finished Request</msg>
+<msg time="2024-11-26T15:12:18.890364" level="DEBUG">POST http://localhost:58853/session/23a660cbd2c6ede5f83aab82eb5ca6e7/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.4534D6106699D1C37F3208CE43348B27.d.B27DB4E0C57EA5D3C504B3173D96D7D1.e.3'}]}</msg>
+<msg time="2024-11-26T15:12:18.912493" level="DEBUG">http://localhost:58853 "POST /session/23a660cbd2c6ede5f83aab82eb5ca6e7/execute/sync HTTP/11" 200 0</msg>
+<msg time="2024-11-26T15:12:18.912746" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-11-26T15:12:18.912905" level="DEBUG">Finished Request</msg>
+<msg time="2024-11-26T15:12:18.913040" level="TRACE">Return: None</msg>
+<arg>${Login.input_usuario}</arg>
+<arg>timeout=${TempoEspera_10}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:12:18.841926" elapsed="0.071220"/>
+</kw>
+<kw name="Highlight Elements" owner="Browser">
+<msg time="2024-11-26T15:12:18.915241" level="TRACE">Arguments: [ '//*[@id="Usuario"]' ]</msg>
+<msg time="2024-11-26T15:12:19.209446" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper</msg>
+<msg time="2024-11-26T15:12:19.220209" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\browser.py", line 1230, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\keywords\evaluation.py", line 115, in highlight_elements
+    with self.playwright.grpc_channel() as stub:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\base\librarycomponent.py", line 54, in playwright
+    return self.library.playwright
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\browser.py", line 935, in playwright
+    self._playwright = Playwright(
+                       ~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...&lt;2 lines&gt;...
+        self._playwright_log,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\playwright.py", line 53, in __init__
+    self.ensure_node_dependencies()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\playwright.py", line 85, in ensure_node_dependencies
+    raise RuntimeError(
+    ...&lt;7 lines&gt;...
+    )
+RuntimeError: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper</msg>
+<arg>${Login.input_usuario}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<status status="FAIL" start="2024-11-26T15:12:18.913520" elapsed="0.306852">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Login.input_usuario}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.220786" elapsed="0.000361"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Login.input_usuario}</arg>
+<arg>text=${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.221412" elapsed="0.000275"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.input_senha}</arg>
+<arg>timeout=${TempoEspera_10}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.221970" elapsed="0.000399"/>
+</kw>
+<kw name="Highlight Elements" owner="Browser">
+<arg>${Login.input_senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.222660" elapsed="0.000400"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Login.input_senha}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.223338" elapsed="0.000398"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Login.input_senha}</arg>
+<arg>text=${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.223996" elapsed="0.000391"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>evidencia.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.224658" elapsed="0.000392"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.btn_salvar}</arg>
+<arg>timeout=${TempoEspera_10}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.225318" elapsed="0.000374"/>
+</kw>
+<kw name="Highlight Elements" owner="Browser">
+<arg>${Login.btn_salvar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.225975" elapsed="0.000376"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Login.btn_salvar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T15:12:19.226817" elapsed="0.000393"/>
+</kw>
+<status status="FAIL" start="2024-11-26T15:12:18.840595" elapsed="0.386919">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper</status>
+</kw>
+<status status="FAIL" start="2024-11-26T15:12:14.746530" elapsed="4.481613">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper</status>
+</test>
+<test id="s1-t2" name="[Teardown]" line="9">
+<kw name="Close Browser">
+<msg time="2024-11-26T15:12:19.349194" level="FAIL">Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    Browser.Close Browser
+    SeleniumLibrary.Close Browser</msg>
+<status status="FAIL" start="2024-11-26T15:12:19.348810" elapsed="0.000491">Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    Browser.Close Browser
+    SeleniumLibrary.Close Browser</status>
+</kw>
+<status status="FAIL" start="2024-11-26T15:12:19.347905" elapsed="0.001921">Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    Browser.Close Browser
+    SeleniumLibrary.Close Browser</status>
+</test>
+<status status="FAIL" start="2024-11-26T15:12:13.756103" elapsed="5.672358"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="AtendimentoParticularizado">AtendimentoParticularizado</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-26T15:12:19.339268" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper</msg>
+<msg time="2024-11-26T15:12:19.422939" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper</msg>
+<msg time="2024-11-26T15:12:19.557447" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\rlopez\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper</msg>
+</errors>
+</robot>
